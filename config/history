@@ -1,0 +1,15 @@
+ls
+exit
+load
+load test
+load
+ls
+load config
+ls
+load config
+ls
+start
+ls
+stop
+ls
+exit

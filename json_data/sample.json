@@ -1,0 +1,382 @@
+[
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520075375420.8,
+    "rssi": -30,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520075679979.5,
+    "rssi": -60,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520075679979.5,
+    "rssi": -60,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520075984726.0,
+    "rssi": -80,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520076959890.0,
+    "rssi": -40,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520076969647.5,
+    "rssi": -40,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520080191871.2,
+    "rssi": -30,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520080191871.2,
+    "rssi": -60,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520080191871.2,
+    "rssi": -60,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520080191871.2,
+    "rssi": -80,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520095339779.5,
+    "rssi": -80,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520095339779.5,
+    "rssi": -40,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520095339779.5,
+    "rssi": -30,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520095339779.5,
+    "rssi": -60,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520095339779.5,
+    "rssi": -60,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520104432561.2,
+    "rssi": -40,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520104432561.2,
+    "rssi": -40,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520104432561.2,
+    "rssi": -80,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520104432561.2,
+    "rssi": -80,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520104432561.2,
+    "rssi": -30,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593520134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593520134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593520134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+
+
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529075375420.8,
+    "rssi": -30,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529075679979.5,
+    "rssi": -60,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529075679979.5,
+    "rssi": -60,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529075984726.0,
+    "rssi": -80,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529076959890.0,
+    "rssi": -40,
+    "ie": "825e098a2b07c7e91a1d5e94311f065e",
+    "ssid": "78:11:dc:4c:76:74"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529076969647.5,
+    "rssi": -40,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529080191871.2,
+    "rssi": -30,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529080191871.2,
+    "rssi": -60,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529080191871.2,
+    "rssi": -60,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529080191871.2,
+    "rssi": -80,
+    "ie": "1bcbaac4ce598faa45c6649df9504ddc",
+    "ssid": "a4:83:e7:9b:61:38"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593520095339779.5,
+    "rssi": -80,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529095339779.5,
+    "rssi": -40,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529095339779.5,
+    "rssi": -30,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529095339779.5,
+    "rssi": -60,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529095339779.5,
+    "rssi": -60,
+    "ie": "25428f1f46a93ac7d4e368ac7f8b0bcf",
+    "ssid": "e4:04:39:c5:ea:1c"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529104432561.2,
+    "rssi": -40,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529104432561.2,
+    "rssi": -40,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529104432561.2,
+    "rssi": -80,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529104432561.2,
+    "rssi": -80,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529104432561.2,
+    "rssi": -30,
+    "ie": "2a72f11eb4315099fdb04f691ed45001",
+    "ssid": "f0:03:8c:a1:46:c3"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1593529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1593529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1593529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1593529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f7"
+  },
+  {
+    "ap": "tinkerboard1",
+    "epoch": 1693529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f8"
+  },
+  {
+    "ap": "tinkerboard2",
+    "epoch": 1693529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f8"
+  },
+  {
+    "ap": "tinkerboard3",
+    "epoch": 1693529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f8"
+  },
+  {
+    "ap": "tinkerboard4",
+    "epoch": 1693529134765054.5,
+    "rssi": -50,
+    "ie": "1e75c40e343790bf3767f46ab4db0377",
+    "ssid": "d4:3b:04:c0:e7:f8"
+  }
+]
