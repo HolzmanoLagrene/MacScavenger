@@ -22,6 +22,11 @@ The user interacts with the system by starting the Shell via
  After successfully deploying the monitor nodes, the Shell is used to start and stop the data collection process by tying
  `setup`, `start` or `stop`.
  
+ To configure a valid database source for storing the monitored data. A folder must be placed
+  in the folder `SyncDataBaseInterfaces`, implementing the interface `SyncDataBaseBaseClass`.
+  This class can then be loaded in the `MacScavengerSync` class and assigned as database with the following code:\
+  `self.database = CustomDataBase()`.
+ 
  ### Data Analysis
 The data anlysis process is started via the shell by typing
 `analyze` into the shell.
