@@ -1,4 +1,5 @@
 import ast
+import json
 import os
 import time
 from cmd import Cmd
@@ -7,7 +8,7 @@ import yaml
 
 from MacScavengerAnalyzer import ScavengerAnalyzer
 from MacScavengerSync import Swarm, CaptureDevice
-
+from pymongo.errors import ServerSelectionTimeoutError
 try:
     import readline
 except ImportError:
@@ -145,25 +146,55 @@ class ScavengerShell(Cmd):
         print('Removes a specified monitoring device from the list.')
 
     def do_analyze(self, inp):
-        def are_ap_positions_valid(ap_positions):
+        def parse_ap_position(ap_positions):
             try:
-                ast.literal_eval(ap_positions)
-                return True
+                parsed_pos = ast.literal_eval(ap_positions)
+                return parsed_pos
             except:
-                pass
+                return None
 
-        def is_agreement_valid(agreement):
-            return True
+        def is_data_source_valid(data_source):
+            def is_file_valid(file_content):
+                if len(file_content) > 0:
+                    for piece in file_content:
+                        if sorted(piece.keys()) == ['ap', 'epoch', 'ie', 'rssi', 'ssid']:
+                            pass
+                        else:
+                            return False
+                    return True
+                else:
+                    return False
 
-        ap_positions = None
+            if os.path.isfile(data_source):
+                with open(data_source,'r') as in_:
+                    data = json.load(in_)
+                    if is_file_valid(data):
+                        return True
+                    else:
+                        return False
+            if os.path.isdir(data_source):
+                for root, dirs, files in os.walk(data_source):
+                    for file in files:
+                        with open(os.path.join(root,file), 'r') as in_:
+                            data = json.load(in_)
+                            if is_file_valid(data):
+                                pass
+                            else:
+                                return False
+                    return True
 
-        while ap_positions is None:
+        while True:
             ap_positions = input('Please enter Access Point Positons in the following form {"ap1":(0,0), "ap2":(5,0),"ap3":(5,5),"ap4":(0,5)}\n')
-            if not are_ap_positions_valid(ap_positions):
-                ap_positions = None
+            parsed_ap_positions = parse_ap_position(ap_positions)
+            if parsed_ap_positions:
+                break
+            else:
                 print('Unknown Format - Please try again! \n')
-        print()
-        analyzer = ScavengerAnalyzer(ast.literal_eval(ap_positions))
+        try:
+            analyzer = ScavengerAnalyzer(parsed_ap_positions)
+        except ServerSelectionTimeoutError as e:
+            print('No MongoDB instance: {}'.format(e))
+            return
         analyzer_config = analyzer.get_config()
         print('Analyzer has the following Configuration:')
         print('- Interval Size in seconds: {0}\n'
@@ -173,17 +204,62 @@ class ScavengerShell(Cmd):
               '- Verbosity: {4}'
               .format(*analyzer_config)
               )
-        agreement = input('Do you agree with this configuration? Type y/n!')
-        agreement = agreement.lower()
-        if is_agreement_valid(agreement):
-            if agreement == 'n':
-                print('Yes you are!!')
+        while True:
+            agreement = input('Do you agree with this configuration? Type y/n!')
+            agreement = agreement.lower()
+            if agreement == 'y':
+                break
+            elif agreement == 'n':
+                while True:
+                    configuration = input('Please specify the parameters in the following order:\n 1. Interval Size in seconds\n 2. Assumed Walking Speed in km/h\n 3. In Burst Time Threshold in seconds\n 4. Min. AP detection Rate\n 5. Level of Verbosity (1 or 0)\n Please specify the configurations in the following way: 1 2 3 4 5\n')
+                    parsed = configuration.split()
+                    if len(parsed) == 5:
+                        break
+                    else:
+                        print('Please choose valid options')
+                        continue
+                break
+            else:
+                continue
 
-        data_path = input('Please enter your data path\n')
-        data_path = data_path + '/*.json'
+        is_dir=False
+        while True:
+            data_path = input('Please enter a valid data path\n')
+            try:
+                abs_data_path = os.path.abspath(data_path)
+            except TypeError:
+                continue
+            if os.path.isfile(abs_data_path):
+                if is_data_source_valid(abs_data_path):
+                    print('The specified data source is a valid file')
+                    break
+                else:
+                    print('The specified data source is a non-valid file')
+                    continue
+            elif os.path.isdir(abs_data_path):
+                if not os.listdir(abs_data_path):
+                    print('The specified data source is an empty directory')
+                    continue
+                else:
+                    if is_data_source_valid(abs_data_path):
+                        print('The specified data source is a valid directory')
+                        is_dir = True
+                        break
+                    else:
+                        print('The specified data source is a non-valid directory. Might contain elements in the wrong format.')
+                        continue
+            else:
+                continue
+
+
         print('Starting Analysis ...')
-        analyzer.start(data_path)
-        analyzer.summary()
+        try:
+            analyzer.start(abs_data_path,is_dir)
+            analyzer.summary()
+        except ValueError as e:
+            print('Error in Analysis Process: {}'.format(e), '\nPossibly the timestamps of the data are too far apart')
+
+
 
     def help_analyze(self):
         print('Start data analysis process.')

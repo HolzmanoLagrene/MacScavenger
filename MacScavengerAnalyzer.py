@@ -27,7 +27,7 @@ class ScavengerAnalyzer:
         if self.verbosity == 1:
             print(text)
 
-    def start(self, data_path):
+    def start(self, data_path, is_dir):
         source = Stream()
         pipe = source \
             .map(self._load_json) \
@@ -42,11 +42,15 @@ class ScavengerAnalyzer:
             .map(self._localize) \
             .map(self._interpret_results) \
             .sink(self._to_database)
-        for fn in glob(data_path):
-            source.emit(fn)
+        if is_dir:
+            for fn in glob(data_path+'/*.json'):
+                source.emit(fn)
+        else:
+            for fn in glob(data_path):
+                source.emit(fn)
 
     def _load_json(self, path):
-        with open(path, 'r+') as inp_:
+        with open(path, 'r') as inp_:
             return json.load(inp_)
 
     def _parse_timestamp(self, data_frame):
@@ -154,11 +158,3 @@ class ScavengerAnalyzer:
         print('Approximately {0} different recognizable devices on site that were detected by at minimum {1} APs'.format(unqiue_ids, self.min_device_detection_rate))
         print('Thereof, {0} devices were seen just once, while {1} were seen multiple times'.format(uniquely_seen_ids, non_randomizing_devices + randomizing_devices))
         print('{0} devices were using MAC Randomization, {1} were not applying Randomization techniques'.format(randomizing_devices, non_randomizing_devices))
-
-
-if __name__ == '__main__':
-    ap_data = {'tinkerboard1': (0, 0), 'tinkerboard2': (8, 0), 'tinkerboard3': (8, 5), 'tinkerboard4': (0, 5)}
-    scavAnalyzer = ScavengerAnalyzer(ap_data)
-    scavAnalyzer.time_interval_in_s = 20
-    scavAnalyzer.start('json_data/*.json')
-    scavAnalyzer.summary()

@@ -8,7 +8,7 @@ class SyncDataBaseAWS(SyncDataBaseBaseclass):
         super().__init__()
         import pandas as pd
         import boto3
-        access_file = os.path.join(os.path.dirname(os.path.realpath(__file__)),'accessKeys.csv')
+        access_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'accessKeys.csv')
         credentials = pd.read_csv(access_file)
         session = boto3.Session(credentials['Access key ID'].iloc[0], credentials['Secret access key'].iloc[0])
         session.get_credentials()

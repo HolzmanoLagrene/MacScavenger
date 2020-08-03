@@ -30,3 +30,34 @@ The user interacts with the system by starting the Shell via
  ### Data Analysis
 The data anlysis process is started via the shell by typing
 `analyze` into the shell.
+
+
+### Demo
+The analysis process can be tested by using the `total_data.json` file in the folder `json_data`:
+```
+Welcome! Type ? to list commands
+MacScavenger> analyze
+
+Please enter Access Point Positons in the following form {"ap1":(0,0), "ap2":(5,0),"ap3":(5,5),"ap4":(0,5)}
+{"tinkerboard1":(0,0),"tinkerboard2":(2,1),"tinkerboard3":(2,5),"tinkerboard4":(0,0)}
+
+Analyzer has the following Configuration:
+- Interval Size in seconds: 10
+- Assumed Walking Speed in km/h: 2
+- In Burst Time Threshold in seconds: 1
+- Min. AP detection Rate: 3
+- Verbosity: 0
+Do you agree with this configuration? Type y/n!
+y
+
+Please enter a valid data path
+json_data/total_data.json
+
+The specified data source is a valid file
+Starting Analysis ...
+
+Summary:                                                                             
+Approximately 425 different recognizable devices on site that were detected by at minimum 3 APs
+Thereof, 425 devices were seen just once, while 370 were seen multiple times
+301 devices were using MAC Randomization, 69 were not applying Randomization techniques
+```

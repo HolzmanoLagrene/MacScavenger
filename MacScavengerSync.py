@@ -10,8 +10,8 @@ import termtables as tt
 from streamz import Stream
 
 warnings.filterwarnings("ignore")
-from SyncDataBaseInterfaces import AWS
-
+#from SyncDataBaseInterfaces import AWS
+from SyncDataBaseInterfaces import Local
 
 class Swarm:
     def __init__(self):
@@ -20,9 +20,8 @@ class Swarm:
         self.streams = []
         self.last_stub = {}
         self.q = deque(maxlen=1)
-
-        self.s3 = None
-        self.database = AWS.SyncDataBaseAWS()
+        self.database = None
+        #self.database = AWS.SyncDataBaseAWS()
 
     def setup_devices(self):
         for device in self.device_list:
@@ -79,6 +78,8 @@ class Swarm:
             pass
 
     def capture_and_fetch(self):
+        if not self.database:
+            self.database = Local.SyncDataBaseLocal()
         self.q.append(True)
         for device in self.device_list:
             source = Stream(asynchronous=False)

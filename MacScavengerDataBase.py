@@ -6,7 +6,9 @@ from pymongo import MongoClient
 class MacScavengerDataBase:
 
     def __init__(self):
-        db = MongoClient().mac_scavenger_db
+        client = MongoClient(serverSelectionTimeoutMS=2000)
+        client.server_info()
+        db = client.mac_scavenger_db
         self.db_state_handle = db['ie-ssid-registry-{}'.format(time.time_ns())]
         self.db_summary_handle = db['summary-{}'.format(time.time_ns())]
 
