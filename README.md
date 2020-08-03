@@ -34,7 +34,7 @@ The data anlysis process is started via the shell by typing
 
 ### Demo
 The analysis process can be tested by using the `total_data.json` file in the folder `json_data`:
-```
+```console
 Welcome! Type ? to list commands
 MacScavenger> analyze
 
