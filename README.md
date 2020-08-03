@@ -21,6 +21,7 @@ The user interacts with the system by starting the Shell via
  To gather data, the code for the monitor nodes must be started via `python MacScavengerMonitor.py PORT_NUMBER` on the devices responsible for data collection.
  After successfully deploying the monitor nodes, the Shell is used to start and stop the data collection process by tying
  `setup`, `start` or `stop`.
+ 
  ### Data Analysis
 The data anlysis process is started via the shell by typing
 `analyze` into the shell.
