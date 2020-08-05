@@ -9,6 +9,7 @@ from MacScavengerDataBase import MacScavengerDataBase
 from MacScavengerLocalizer import MacScavengerLocalizer
 
 
+
 class ScavengerAnalyzer:
     def __init__(self, ap_data, time_interval_in_s=10, assumed_walking_speed_km_per_h=2, in_burst_threshold_in_s=1, min_device_detection_rate=3, verbosity=0):
         self.Localizer = MacScavengerLocalizer(ap_data)
@@ -19,6 +20,7 @@ class ScavengerAnalyzer:
         self.in_burst_threshold_in_s = in_burst_threshold_in_s
         self.min_device_detection_rate = min_device_detection_rate
         self.verbosity = verbosity
+
 
     def get_config(self):
         return self.time_interval_in_s, self.assumed_walking_speed_km_per_h, self.in_burst_threshold_in_s, self.min_device_detection_rate, self.verbosity
